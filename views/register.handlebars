@@ -1,0 +1,64 @@
+<div class="container">
+
+
+    {{#if errors}} {{#each errors}}
+    <div class="alert alert-danger">
+         {{msg}}
+    </div>
+    {{/each}} {{/if}}
+
+
+    <fieldset>
+
+        <form name="RegisterForm" method="POST" action="/users/api/v1/register">
+            <div class="col-md-12">
+              
+                <div class="form-group">
+                    <input type="text" class="form-control input-sm" name="username" placeholder="Username">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control input-sm" name="password" placeholder="Password">
+                </div>
+                <div class="form-group">
+
+                    <input type="text" class="form-control input-sm" name="email" placeholder="Email">
+                </div>
+
+                <div class="form-group">
+
+                    <input type="text" class="form-control input-sm" id="mobile" placeholder="Mobile" name="mobile">
+                </div>
+
+                <div class="form-group">
+
+                    <textarea class="form-control input-sm" id="address" rows="3" placeholder="Address" name="address"></textarea>
+                </div>
+
+                <div class="form-group">
+
+                    <input type="text" class="form-control input-sm" id="city" placeholder="City" name="city">
+                </div>
+
+                <div class="form-group">
+
+                    <input type="text" class="form-control input-sm" id="state" placeholder="State" name="state">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control input-sm" id="country" placeholder="Country" name="country">
+                </div>
+
+                <div class="form-group">
+
+                    <input type="text" class="form-control input-sm" id="pincode" placeholder="PinCode" name="pincode">
+                </div>
+
+
+
+                <button type="submit" class="btn btn-success btn-md">Register</button>
+
+            </div>
+        </form>
+    </fieldset>
+</div>
