@@ -14,8 +14,9 @@ router.get('/register', function (req, res) {
 });
 
 router.get('/logout', function (req, res) {
-    //res.render("register"); 
-    res.send("You have Successfully Logout");
+    req.logout();
+    req.flash("success_msg", "You are successfully Logout !!!!!!!!!");
+    res.redirect("/users/login");
 });
 
 router.post('/login', passport.authenticate('local', {
